@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 200px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.vehicle-info, .service-history {
+    margin-bottom: 20px;
+}
+
+.vehicle-info h2, .service-history h2 {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.vehicle-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+.service-history {
+    position: relative;
+}
+
+.button-container {
+    text-align: right; /* Alinea el botón a la derecha */
+    margin-bottom: 10px; /* Espacio debajo del botón */
+}
+
+.add-service-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px; /* Tamaño reducido */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+.add-service-btn:hover {
+    background-color: #218838;
+}
+
+.service-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.service-history table th, .service-history table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.service-history table th {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.service-history table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.service-history table tr:hover {
+    background-color: #ddd;
+}
