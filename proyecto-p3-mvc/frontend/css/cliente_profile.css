@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.profile-container {
+    width: 80%;
+    margin: 200px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.profile-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.info-line {
+    margin-bottom: 10px;
+}
+
+.info-item {
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+.car-table {
+    margin-top: 30px;
+}
+
+.add-car-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.add-car-button:hover {
+    background-color: #0056b3;
+}
+
+.car-table h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.btn-edit, .btn-delete, .btn-profile {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-profile:hover {
+    background-color: #3dbd4c;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.footer-table {
+    width: 80%;
+  }
+  
+  .paginator {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .actions{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    height: 56px;
+  }
