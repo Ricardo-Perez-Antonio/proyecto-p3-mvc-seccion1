@@ -1,0 +1,93 @@
+/* Estilos generales para el body y el menú */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    margin: 200px auto;
+    text-align: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 500px; /* Ancho aumentado */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+.table-container {
+    margin: -150px auto; /* Reducido para estar más cerca del buscador */
+    max-width: 900px; /* Ancho máximo reducido para la tabla */
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es demasiado ancha */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px; /* Reducido el padding */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-edit, .btn-delete, .btn-profile {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-profile:hover {
+    background-color: #3dbd4c;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
