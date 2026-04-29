@@ -1,5 +1,10 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/css/carro_profile.css">
+</head>
 <?php
-	require_once 	require_once "../controllers/main.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/main.php";
+	require_once __DIR__ . "/../controllers/main.php";
 
 	$id = (isset($_GET['carro_id_up'])) ? $_GET['carro_id_up'] : 0;
 	$id=limpiar_cadena($id);
@@ -13,7 +18,7 @@
         $matricula=$datos['carro_matricula'];
         $año=$datos['carro_año'];
         $color=$datos['carro_color'];
-        $km=$datos['carro_km'];
+        $km=$datos['carro_kilometraje'];
         $bateria=$datos['carro_serial_bateria'];
 ?>
 <div class="container">

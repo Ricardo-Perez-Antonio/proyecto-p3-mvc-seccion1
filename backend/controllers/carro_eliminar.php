@@ -15,14 +15,14 @@
 			echo '
             <script>
                 alert("El carro se elimino con exito");
-                window.location = "index.php?vista=cliente_list"
+                window.location = "./index.php?vista=cliente_list"
             </script>
         ';
 		}else{
 			echo '
             <script>
                 alert("No se pudo eliminar el carro, por favor intente nuevamente");
-                window.location = "index.php?vista=home"
+                window.location = "./index.php?vista=home"
             </script>
         ';
 		}
@@ -32,7 +32,7 @@
 		echo '
             <script>
                 alert("El carro que intenta eliminar no existe");
-                window.location = "index.php?vista=cliente_list"
+                window.location = "./index.php?vista=cliente_list"
             </script>
         ';
 	}

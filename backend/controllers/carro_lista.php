@@ -6,8 +6,8 @@
 	$campos="carros.carro_id, carros.carro_vehiculo, carros.carro_matricula, carros.carro_año, carros.carro_color, carros.carro_kilometraje, 
                 carros.carro_serial_bateria, carros.carro_cliente, cliente.cliente_id";
     
-    $consulta_datos="SELECT $campos FROM carros INNER JOIN cliente ON carros.carro_cliente=cliente.cliente_id WHERE carro_id= '$id' ORDER BY carro_año ASC LIMIT $inicio,$registros";
-    $consulta_total="SELECT COUNT(carro_id) FROM carros WHERE carro_id= '$id'";
+    $consulta_datos="SELECT $campos FROM carros INNER JOIN cliente ON carros.carro_cliente=cliente.cliente_id WHERE carros.carro_cliente = '$id' ORDER BY carro_año ASC LIMIT $inicio,$registros";
+    $consulta_total="SELECT COUNT(carro_id) FROM carros WHERE carros.carro_cliente = '$id'";
 
     $conexion =conexion();
  
@@ -96,7 +96,7 @@
 <script type="text/javascript">
 function Delete()
 {
-    var respuesta = confirm("¿Estas seguro de eliminar este estudiante?");
+    var respuesta = confirm("¿Estas seguro de eliminar este carro?");
         
     if (respuesta == true) {
         return true;

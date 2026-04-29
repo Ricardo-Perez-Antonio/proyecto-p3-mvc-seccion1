@@ -17,6 +17,7 @@
         exit();
 	}else{
 		$datos=$check_carro->fetch();
+		$id_cliente = $datos['carro_cliente'];
 	}
 	$check_carro=null;
 
@@ -33,7 +34,7 @@
         echo '
         <script>
             alert("No has llenado todo los campos que son obligatorios");
-            window.location = "../index.php?vista=cliente_list"
+            window.location = "../../index.php?vista=cliente_list"
         </script>
         ';
         exit();
@@ -65,14 +66,14 @@
         echo '
             <script>
                 alert("El carro se edito correctamente");
-                window.location = "../index.php?vista=cliente_profile&cliente_id_up='.$id.'"
+                window.location = "../../index.php?vista=cliente_profile&cliente_id_up='.$id_cliente.'"
             </script>
         ';
     }else{
         echo '
             <script>
-                alert("No se pudo edito el carro, intentelo nuevamente");
-                window.location = "../index.php?vista=cliente_profile&cliente_id_up='.$id.'"
+                alert("No se pudo editar el carro, intentelo nuevamente");
+                window.location = "../../index.php?vista=cliente_profile&cliente_id_up='.$id_cliente.'"
             </script>
         ';
     }

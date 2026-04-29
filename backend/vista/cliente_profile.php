@@ -39,12 +39,12 @@
             </div>
         </div>
         <div class="car-table">
-            <a href="../../index.php?vista=carro_new&cliente_id_up=<?php echo $id;?>" class="add-car-button">Agregar Carro</a>
+            <a href="index.php?vista=carro_new&cliente_id_up=<?php echo $id;?>" class="add-car-button">Agregar Carro</a>
             <h2>CARROS REGISTRADOS</h2>
             <?php
                 require_once __DIR__ . "/../controllers/main.php";
 
-                //Eliminar cliente
+                //Eliminar carro
                 if(isset($_GET['carro_id_del'])){
                     require_once __DIR__ . "/../controllers/carro_eliminar.php";
                 }
@@ -60,7 +60,7 @@
                 }
 
                 $pagina=limpiar_cadena($pagina);
-                $url="index.php?vista=carro_list&cliente_id_up=".$id."&page=";
+                $url="index.php?vista=cliente_profile&cliente_id_up=".$id."&page=";
                 $registros=15;
                 $busqueda="";
 
@@ -73,7 +73,7 @@
 		echo '
             <script>
                 alert("No podemos obtener la informacion solicitada");
-                window.location = "../../index.php?vista=cliente_list"
+                window.location = "./index.php?vista=cliente_list"
             </script>
             ';
 	}

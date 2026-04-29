@@ -1,3 +1,8 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/css/carro_new.css">
+</head>
 <?php
 	require_once __DIR__ . "/../controllers/main.php";
 
@@ -16,9 +21,10 @@
         $km=$datos['carro_kilometraje'];
         $bateria=$datos['carro_serial_bateria'];
 ?>
+<body>
 <div class="form-container">
     <h1>Editar Vehículo</h1>
-    <form action="../controllers/carro_editar.php" method="post">
+    <form action="backend/controllers/carro_editar.php" method="post">
         <input type="hidden" name="carro_id" value="<?php echo $datos['carro_id'];?>" required>
 
         <div class="form-group">
@@ -51,6 +57,7 @@
         </div>
     </form>
 </div>
+</body>
 <?php
 	}else{
 		echo '
