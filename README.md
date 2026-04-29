@@ -1,4 +1,4 @@
-# proyecto-p3-mvc-seccion1
+# proyecto-p3-mvc-seccion1- grupo E6
 
 Equipo
 Rizardo Perez C.I. 30.411.383
