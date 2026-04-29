@@ -22,7 +22,7 @@
                 echo '
                     <script>
                         alert("Introduzca un termino de busqueda");
-                        window.location = "../index.php?vista=home"
+                        window.location = "./index.php?vista=home"
                     </script>
                 ';
             }else{
@@ -41,7 +41,7 @@
         echo '
             <script>
                 alert("No podemos procesar la peticion");
-                window.location = "../index.php?vista=home"
+                window.location = "./index.php?vista=home"
             </script>
         ';
     }

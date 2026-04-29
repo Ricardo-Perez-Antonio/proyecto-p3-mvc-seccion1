@@ -1,6 +1,6 @@
 <?php
-	require_once "../include/session_start.php";
-	require_once "main.php";
+	require_once __DIR__ . "/../include/session_start.php";
+	require_once __DIR__ . "/main.php";
 
 	$id=limpiar_cadena($_POST['cliente_id']);
 
@@ -11,7 +11,7 @@
 		echo '
             <script>
                 alert("El cliente no existe en el sistema");
-                window.location = "index.php?vista=home"
+                window.location = "../../index.php?vista=home"
             </script> 
         ';
         exit();
@@ -32,7 +32,7 @@
         echo '
         <script>
             alert("No has llenado todo los campos que son obligatorios");
-            window.location = "../index.php?vista=cliente_new"
+            window.location = "../../index.php?vista=cliente_new"
         </script>
         ';
         exit();
@@ -59,15 +59,15 @@
        	echo '
             <script>
                	alert("El cliente fue editado correctamente");
-                window.location = "../index.php?vista=cliente_list"
+                window.location = "../../index.php?vista=cliente_list"
             </script>
         ';
     }else{
        	echo '
             <script>
                 alert("¡Ocurrio un error! No se pudo editar el cliente");
-                window.location = "../index.php?vista=cliente_list"
+                window.location = "../../index.php?vista=cliente_list"
             </script>
         ';
     }
-    $editar_clienete=null;
+    $editar_cliente=null;

@@ -86,7 +86,7 @@
     ';
 
     if($total>0 && $pagina<=$Npaginas){
-		$tabla.='<p class="footer-table">Mostrando estudiatess <strong>'.$paginador_inicial.'</strong> al <strong>'.$paginador_final.'</strong> de un <strong>total de '.$total.'</strong></p>';
+		$tabla.='<p class="footer-table">Mostrando clientes <strong>'.$paginador_inicial.'</strong> al <strong>'.$paginador_final.'</strong> de un <strong>total de '.$total.'</strong></p>';
 	}
 
 	$conexion=null;

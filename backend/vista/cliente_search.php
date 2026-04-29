@@ -1,9 +1,15 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/css/search.css">
+</head>
+<body>
     <main>
     <?php
-        require_once         require_once "../controllers/main.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/main.php";
+        require_once __DIR__ . "/../controllers/main.php";
 
         if(isset($_POST['modulo_buscador'])){
-            require_once             require_once "../controllers/buscador.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/buscador.php";
+            require_once __DIR__ . "/../controllers/buscador.php";
         }
 
         if(!isset($_SESSION['busqueda_cliente']) && empty($_SESSION['busqueda_cliente'])){
@@ -30,7 +36,7 @@
             <?php
             //Eliminar cliente
             if(isset($_GET['cliente_id_del'])){
-                require_once                 require_once "../controllers/cliente_eliminar.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/cliente_eliminar.php";
+                require_once __DIR__ . "/../controllers/cliente_eliminar.php";
             }
 
             if (!isset($_GET['page'])) {
@@ -48,8 +54,9 @@
             $registros=15;
             $busqueda=$_SESSION['busqueda_cliente'];
 
-            require_once '../controllers/cliente_lista.php';
+            require_once __DIR__ . "/../controllers/cliente_lista.php";
             }
             ?>
         </div>
     </main>
+</body>

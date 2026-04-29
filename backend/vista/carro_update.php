@@ -1,7 +1,7 @@
 <?php
-	require_once 	require_once "../controllers/main.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/main.php";
+	require_once __DIR__ . "/../controllers/main.php";
 
-	$id = (isset($_GET['carro_id_up'])) ? $_GET['carro_id_up'] : 0;
+	$id = $_GET['carro_id_up'] ?? 0;
 	$id=limpiar_cadena($id);
 
 	$check_carro=conexion();

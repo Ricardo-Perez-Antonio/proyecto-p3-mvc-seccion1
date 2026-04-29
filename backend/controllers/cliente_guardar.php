@@ -14,7 +14,7 @@
         echo '
         <script>
             alert("No has llenado todo los campos que son obligatorios");
-            window.location = "../index.php?vista=cliente_new"
+            window.location = "../../index.php?vista=cliente_new"
         </script>
         ';
         exit();
@@ -31,7 +31,7 @@
     echo '
     <script>
             alert("El numero de cedula ingresado ya existe en el sistema");
-            window.location = "../index.php?vista=cliente_new"
+            window.location = "index.php?vista=cliente_new"
         </script>
     ';
     exit();
@@ -55,14 +55,14 @@
         echo '
             <script>
                 alert("El cliente se registro correctamente");
-                window.location = "../index.php?vista=cliente_list"
+                window.location = "../../index.php?vista=cliente_list"
             </script>
         ';
     }else{
         echo '
             <script>
                 alert("No se pudo registrar el cliente, intentelo nuevamente");
-                window.location = "../index.php?vista=cliente_new"
+                window.location = "../../index.php?vista=cliente_new"
             </script>
         ';
     }

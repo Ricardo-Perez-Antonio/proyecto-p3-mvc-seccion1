@@ -1,5 +1,10 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/css/cliente_profile.css">
+</head> 
 <?php
-	require_once 	require_once "../controllers/main.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/main.php";
+	require_once __DIR__ . "/../controllers/main.php";
 
 	$id = (isset($_GET['cliente_id_up'])) ? $_GET['cliente_id_up'] : 0;
 	$id=limpiar_cadena($id);
@@ -19,7 +24,7 @@
     <h1 class="profile-title">PERFIL DE CLIENTE</h1>
         <div class="profile-header">
             <div class="profile-image">
-                <img src="../frontend/img/cliente.png" alt="Imagen de perfil">
+                <img src="frontend/img/cliente.png" alt="Imagen de perfil">
             </div>
             <div class="profile-info">
                 <div class="info-line">
@@ -34,14 +39,14 @@
             </div>
         </div>
         <div class="car-table">
-            <a href="index.php?vista=carro_new&cliente_id_up=<?php echo $id;?>" class="add-car-button">Agregar Carro</a>
+            <a href="../../index.php?vista=carro_new&cliente_id_up=<?php echo $id;?>" class="add-car-button">Agregar Carro</a>
             <h2>CARROS REGISTRADOS</h2>
             <?php
-                require_once                 require_once "../controllers/main.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/main.php";
+                require_once __DIR__ . "/../controllers/main.php";
 
                 //Eliminar cliente
                 if(isset($_GET['carro_id_del'])){
-                    require_once                     require_once "../controllers/carro_eliminar.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/carro_eliminar.php";
+                    require_once __DIR__ . "/../controllers/carro_eliminar.php";
                 }
                 
                 if (!isset($_GET['page'])) {
@@ -59,7 +64,7 @@
                 $registros=15;
                 $busqueda="";
 
-                require_once '../controllers/carro_lista.php';
+                require_once __DIR__ . "/../controllers/carro_lista.php";
             ?>
         </div>
     </div>
@@ -68,7 +73,7 @@
 		echo '
             <script>
                 alert("No podemos obtener la informacion solicitada");
-                window.location = "index.php?vista=cliente_list"
+                window.location = "../../index.php?vista=cliente_list"
             </script>
             ';
 	}

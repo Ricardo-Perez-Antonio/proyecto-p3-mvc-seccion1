@@ -1,5 +1,10 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/css/cliente_new.css">
+</head>
 <?php
-	require_once 	require_once "../controllers/main.php";SERVER['DOCUMENT_ROOT'] . '/Taller/proyecto-p3-mvc/backend/controllers/main.php";
+	require_once __DIR__ . "/../controllers/main.php";
 
 	$id = (isset($_GET['cliente_id_up'])) ? $_GET['cliente_id_up'] : 0;
 	$id=limpiar_cadena($id);
@@ -40,7 +45,7 @@
           }
     
 ?>
-<form action="../controllers/cliente_editar.php" method="post" autocomplete="off">
+<form action="./backend/controllers/cliente_editar.php" method="post" autocomplete="off">
         <h2>EDITAR CLIENTE</h2>
 
         <input type="hidden" name="cliente_id" value="<?php echo $datos['cliente_id'];?>" required>
