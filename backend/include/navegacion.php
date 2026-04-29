@@ -1,7 +1,7 @@
 <div class="nav">
     <div class="header_superior">
         <div class="logo">
-            <img src="../frontend/img/logotaller.png" alt="">
+            <img src="frontend/img/logotaller.png" alt="">
         </div>
         <div class="usuario">
             <div class="img">
