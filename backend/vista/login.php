@@ -17,8 +17,8 @@
 
                 <?php
                 if (isset($_POST['usuario']) && isset($_POST['password'])) {
-                    require_once $_SERVER['DOCUMENT_ROOT'] . "/Taller/proyecto-p3-mvc/backend/controllers/main.php";
-                    require_once $_SERVER['DOCUMENT_ROOT'] . "/Taller/proyecto-p3-mvc/backend/controllers/iniciar_session.php";
+                    require_once __DIR__ . "/../controllers/main.php";
+                    require_once __DIR__ . "/../controllers/iniciar_session.php";
                 }
                 ?>
             </form>

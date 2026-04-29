@@ -1,4 +1,4 @@
-<?php
+git config --global commit.gpgsign true<?php
 // Script para crear el usuario administrador juan con contraseña 1234
 
 // Incluir la función de conexión

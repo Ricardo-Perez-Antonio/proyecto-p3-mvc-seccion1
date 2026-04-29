@@ -9,7 +9,7 @@ if($usuario=="" || $contrasena==""){
     echo '
     <script>
         alert("No has llenado todo los campos que son obligatorios");
-        window.location = "../index.php?vista=login"
+        window.location = "./index.php?vista=login"
     </script>
     ';
     exit();
@@ -26,14 +26,14 @@ if ($check_usuario->rowCount()==1) {
         if (headers_sent()) {
             echo "<script> window.location.href='index.php?vista=home'; </script>";
         }else{
-            header("Location: index.php?vista=home");
+            header("Location: ./index.php?vista=home");
 
         }
     }else{
         echo '
         <script>
             alert("El usuario o clave ingresado son incorrecta");
-            window.location = "index.php?vista=login"
+            window.location = "./index.php?vista=login"
         </script>
         ';
     }
@@ -41,7 +41,7 @@ if ($check_usuario->rowCount()==1) {
     echo '
     <script>
         alert("El usuario ingresado no existe en el sistema");
-        window.location = "index.php?vista=login"
+        window.location = "./index.php?vista=login"
     </script>
     ';
 }
