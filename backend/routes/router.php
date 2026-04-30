@@ -30,11 +30,11 @@ function obtenerView() {
     'cliente_guardar', 'cliente_eliminar', 'cliente_editar',
     'cambiar_credenciales',
     'cliente_list', 'cliente_new', 'cliente_profile', 'cliente_search', 'cliente_update',
+    'carro_guardar', 'carro_eliminar', 'carro_editar', 'carro_new', 'carro_profile', 'carro_update',
     'mecanico_list', 'mecanico_new', 'mecanico_profile', 'mecanico_search', 'mecanico_update',
-    'carro_new', 'carro_profile', 'carro_update',
     'inventario_list', 'producto_new', 'producto_search',
     'user_list', 'user_new'
-];
+    ];
     
     if (!in_array($view, $views_permitidas)) {
         $view = '404';

@@ -23,6 +23,42 @@
     <div class="car-table">
         <a href="index.php?view=carro_new&cliente_id_up=<?php echo $id; ?>" class="add-car-button">Agregar Carro</a>
         <h2>CARROS REGISTRADOS</h2>
-        <!-- Aquí irá la lista de carros después -->
+        
+        <?php if ($total_carros > 0): ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nº Vehículo</th>
+                    <th>Matrícula</th>
+                    <th>Año</th>
+                    <th>Color</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $cont = $inicio_carro + 1; ?>
+                <?php foreach ($carros as $carro): ?>
+                <tr>
+                    <td><?php echo $cont; ?></td>
+                    <td><?php echo $carro['carro_vehiculo']; ?></td>
+                    <td><?php echo $carro['carro_matricula']; ?></td>
+                    <td><?php echo $carro['carro_año']; ?></td>
+                    <td><?php echo $carro['carro_color']; ?></td>
+                    <td>
+                        <a href="index.php?view=carro_profile&carro_id_up=<?php echo $carro['carro_id']; ?>" class="btn-profile">Ver</a>
+                        <a href="index.php?view=carro_update&carro_id_up=<?php echo $carro['carro_id']; ?>" class="btn-edit">Editar</a>
+                        <?php if ($_SESSION['rol'] == 1): ?>
+                        <a href="index.php?view=carro_eliminar&carro_id_del=<?php echo $carro['carro_id']; ?>" class="btn-delete" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
+                        <?php endif; ?>
+                    </td>
+                </tr>
+                <?php $cont++; ?>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php else: ?>
+        <p>No hay carros registrados para este cliente.</p>
+        <?php endif; ?>
     </div>
 </div>

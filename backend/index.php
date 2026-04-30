@@ -68,6 +68,34 @@ if ($view == 'cliente_search') {
     require __DIR__ . '/controllers/cliente/cliente_search.php';
 }
 
+// Carros
+if ($view == 'carro_guardar') {
+    require __DIR__ . '/controllers/carro/carro_guardar.php';
+    return;
+}
+
+if ($view == 'carro_editar') {
+    require __DIR__ . '/controllers/carro/carro_editar.php';
+    return;
+}
+
+if ($view == 'carro_eliminar') {
+    require __DIR__ . '/controllers/carro/carro_eliminar.php';
+    return;
+}
+
+if ($view == 'carro_new') {
+    require __DIR__ . '/controllers/carro/carro_new.php';
+}
+
+if ($view == 'carro_profile') {
+    require __DIR__ . '/controllers/carro/carro_profile.php';
+}
+
+if ($view == 'carro_update') {
+    require __DIR__ . '/controllers/carro/carro_update.php';
+}
+
 // ============ CARGAR PLANTILLA ============
 $es_publica = esViewPublica($view);
 include RUTA_VIEWS . 'plantilla.php';

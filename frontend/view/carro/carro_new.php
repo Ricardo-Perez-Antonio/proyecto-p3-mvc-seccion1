@@ -1,24 +1,9 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="frontend/css/carro_new.css">
-</head>
-<?php
-	require_once __DIR__ . "/../controllers/main.php";
+<link rel="stylesheet" href="../frontend/css/carro_new.css">
 
-	$id = (isset($_GET['cliente_id_up'])) ? $_GET['cliente_id_up'] : 0;
-	$id=limpiar_cadena($id);
-    echo $id;
-
-	$check_cliente=conexion();
-	$check_cliente=$check_cliente->query("SELECT * FROM cliente WHERE cliente_id='$id'");
-	if($check_cliente->rowCount()>0){
-		$datos=$check_cliente->fetch();
-?>
 <div class="form-container">
     <h1>Registro de Vehículo</h1>
-    <form action="backend/controllers/carro_guardar.php" method="post">
-        <input type="hidden" name="cliente_id" value="<?php echo $datos['cliente_id'];?>" required>
+    <form action="index.php?view=carro_guardar" method="post">
+        <input type="hidden" name="cliente_id" value="<?php echo $cliente_id; ?>" required>
 
         <div class="form-group">
             <label for="vehicle-number">Número de Vehículo:<span>*</span></label>
@@ -51,14 +36,3 @@
         </div>
     </form>
 </div>
-<?php
-	}else{
-		echo '
-            <script>
-                alert("No podemos obtener la informacion solicitada");
-                window.location = "index.php?vista=cliente_list"
-            </script>
-            ';
-	}
-	$check_cliente=null;
-?>

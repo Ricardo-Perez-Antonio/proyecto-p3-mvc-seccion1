@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../../include/session_start.php';
 require_once __DIR__ . '/../../models/usuario_model.php';
 require_once __DIR__ . '/../../models/cliente_model.php';
+require_once __DIR__ . '/../../models/carro_model.php';
 
 $id = isset($_GET['cliente_id_up']) ? (int)$_GET['cliente_id_up'] : 0;
 
@@ -25,4 +26,14 @@ $apellido   = $datos['cliente_apellido'];
 $cedula     = $datos['cliente_cedula'];
 $principal  = $datos['cliente_num'];
 $secundario = $datos['cliente_num2'];
+
+// Lista de carros del cliente
+$pagina_carro = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+if ($pagina_carro < 1) $pagina_carro = 1;
+$registros_carro = 15;
+$inicio_carro = ($pagina_carro - 1) * $registros_carro;
+
+$carros = listarCarrosPorCliente($id, $inicio_carro, $registros_carro);
+$total_carros = contarCarrosPorCliente($id);
+$url_carros = "index.php?view=cliente_profile&cliente_id_up=" . $id . "&page=";
 ?>
