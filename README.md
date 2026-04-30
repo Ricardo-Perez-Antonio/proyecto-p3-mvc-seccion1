@@ -4,19 +4,83 @@
 
 ```
 proyecto-p3-mvc/
-├── frontend/
-│   ├── css/          # Hojas de estilo
-│   ├── js/           # Archivos JavaScript
-│   └── img/          # Imágenes y recursos visuales
+│
 ├── backend/
-│   ├── controllers/  # Controladores de la aplicación
-│   ├── models/       # Modelos de datos
-│   ├── routes/       # Definición de rutas
-│   ├── database/     # Scripts y configuración de base de datos
-│   ├── include/      # Archivos incluidos y configuraciones
-│   └── vista/        # Vistas de la aplicación
-├── index.php         # Punto de entrada principal
-└── README.md         # Este archivo
+│   ├── index.php                          ← Punto de entrada principal
+│   │
+│   ├── controllers/
+│   │   ├── iniciar_session.php            ← Login
+│   │   ├── logout.php                     ← Cerrar sesión
+│   │   │
+│   │   ├── cliente/
+│   │   │   ├── cliente_guardar.php        ← Crear cliente
+│   │   │   ├── cliente_editar.php         ← Editar cliente
+│   │   │   ├── cliente_eliminar.php       ← Eliminar cliente
+│   │   │   ├── cliente_lista.php          ← Listar clientes
+│   │   │   ├── cliente_profile.php        ← Perfil cliente
+│   │   │   ├── cliente_update.php         ← Formulario editar
+│   │   │   └── cliente_search.php         ← Buscar cliente
+│   │   │
+│   │   └── carro/
+│   │       ├── carro_guardar.php          ← Crear carro
+│   │       ├── carro_editar.php           ← Editar carro
+│   │       ├── carro_eliminar.php         ← Eliminar carro
+│   │       ├── carro_new.php              ← Formulario nuevo carro
+│   │       ├── carro_profile.php          ← Perfil carro
+│   │       └── carro_update.php           ← Formulario editar carro
+│   │
+│   ├── models/
+│   │   ├── usuario_model.php              ← Conexión BD y usuarios
+│   │   ├── cliente_model.php              ← CRUD clientes
+│   │   └── carro_model.php                ← CRUD carros
+│   │
+│   ├── routes/
+│   │   └── router.php                     ← Enrutador central
+│   │
+│   ├── include/
+│   │   ├── navegacion.php                 ← Menú de navegación
+│   │   └── session_start.php              ← Manejo de sesiones
+│   │
+│   └── database/                          ← Scripts SQL
+│
+├── frontend/
+│   ├── css/
+│   │   ├── navegacion.css                 ← Estilos del menú
+│   │   ├── login.css                      ← Estilos login
+│   │   ├── home.css                       ← Estilos mensaje login
+│   │   ├── cliente_list.css               ← Tabla clientes
+│   │   ├── cliente_new.css                ← Formulario cliente
+│   │   ├── cliente_profile.css            ← Perfil cliente
+│   │   ├── search.css                     ← Buscador
+│   │   ├── carro_new.css                  ← Formulario carro
+│   │   └── carro_profile.css              ← Perfil carro
+│   │
+│   ├── img/
+│   │   ├── logotaller.png
+│   │   └── cliente.png
+│   │
+│   └── view/
+│       ├── plantilla.php                  ← HTML base (head, header, main)
+│       ├── login.php                      ← Formulario login
+│       ├── home.php                       ← Panel de bienvenida
+│       ├── 404.php                        ← Página no encontrada
+│       ├── logout.php
+│       │
+│       ├── cliente/
+│       │   ├── cliente_list.php           ← Tabla clientes
+│       │   ├── cliente_new.php            ← Formulario crear
+│       │   ├── cliente_profile.php        ← Perfil cliente
+│       │   ├── cliente_search.php         ← Buscador
+│       │   └── cliente_update.php         ← Formulario editar
+│       │
+│       └── carro/
+│           ├── carro_new.php              ← Formulario crear
+│           ├── carro_profile.php          ← Perfil carro
+│           └── carro_update.php           ← Formulario editar
+│
+├── index.php                              ← Redirige a backend/
+├── crear_admin.php                        ← Script temporal para pruebas
+└── README.md
 ```
 
 ## Descripción
