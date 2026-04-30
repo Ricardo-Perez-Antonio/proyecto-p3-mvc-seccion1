@@ -23,6 +23,8 @@ proyecto-p3-mvc/
 
 Proyecto desarrollado bajo el patrón de arquitectura Modelo-Vista-Controlador (MVC) para la gestión de un taller mecánico.
 
+Nota: Los modulos realizados actualmente son los descritos como "cliente" y "carro"
+
 ## Características
 
 - Gestión de clientes
