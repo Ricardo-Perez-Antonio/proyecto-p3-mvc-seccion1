@@ -155,3 +155,25 @@ span {
     color: red;
     text-align: center;
 }
+
+.btn-cancel {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}

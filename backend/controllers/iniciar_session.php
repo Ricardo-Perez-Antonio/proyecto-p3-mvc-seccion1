@@ -1,48 +1,42 @@
 <?php
+/**
+ * Controlador de Login
+ */
 
-#Almacenando datos
-$usuario = limpiar_cadena($_POST['usuario']);
-$contrasena = limpiar_cadena($_POST['password']);
+require_once __DIR__ . '/../models/usuario_model.php';
 
-#Verificar datos obligatorios
-if($usuario=="" || $contrasena==""){
-    echo '
-    <script>
-        alert("No has llenado todo los campos que son obligatorios");
-        window.location = "./index.php?vista=login"
-    </script>
-    ';
-    exit();
-}
-
-$check_usuario=conexion();
-$check_usuario=$check_usuario->query("SELECT * FROM usuario WHERE usuario_usuario='$usuario'");
-if ($check_usuario->rowCount()==1) {
-    $check_usuario=$check_usuario->fetch();
-    if ($check_usuario['usuario_usuario']==$usuario && password_verify($contrasena, $check_usuario['usuario_contrasena'])) {
-        $_SESSION['id']=$check_usuario['usuario_id'];
-        $_SESSION['usuario']=$check_usuario['usuario_usuario'];
-        $_SESSION['rol']=$check_usuario['rol_id'];
-        if (headers_sent()) {
-            echo "<script> window.location.href='index.php?vista=home'; </script>";
-        }else{
-            header("Location: ./index.php?vista=home");
-
+function procesarLogin() {
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        
+        $usuario = trim($_POST['usuario'] ?? '');
+        $password = trim($_POST['password'] ?? '');
+        
+        // Validar con base de datos
+        $user = validarUsuario($usuario, $password);
+        
+        if ($user) {
+            
+            $_SESSION['id'] = $user['usuario_id'];
+            $_SESSION['usuario'] = $user['usuario_usuario'];
+            $_SESSION['rol'] = $user['rol_id'];
+            
+            header('Location: index.php?view=home');
+            exit();
+            
+        } else {
+            
+            $error = "Usuario o contraseña incorrectos";
+            $view = 'login';
+            $es_publica = true;
+            
+            include RUTA_VIEWS . 'plantilla.php';
+            exit();
         }
-    }else{
-        echo '
-        <script>
-            alert("El usuario o clave ingresado son incorrecta");
-            window.location = "./index.php?vista=login"
-        </script>
-        ';
+        
+    } else {
+        header('Location: index.php?view=login');
+        exit();
     }
-}else{
-    echo '
-    <script>
-        alert("El usuario ingresado no existe en el sistema");
-        window.location = "./index.php?vista=login"
-    </script>
-    ';
 }
-$check_usuario=null;
+?>

@@ -1,4 +1,4 @@
-<form action="backend/controllers/cliente_guardar.php" method="post" autocomplete="off">
+<form action="../backend/index.php?view=cliente_guardar" method="post" autocomplete="off">
         <h2>CREAR CLIENTE</h2>
 
         <div class="field-group">
