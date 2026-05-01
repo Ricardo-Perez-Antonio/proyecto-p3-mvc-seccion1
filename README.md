@@ -2,9 +2,26 @@
 
 ## Descripción
 
-Proyecto desarrollado bajo el patrón de arquitectura Modelo-Vista-Controlador (MVC) para la gestión de un taller mecánico.
+Proyecto desarrollado bajo el patrón de arquitectura Modelo-Vista-Controlador (MVC) 
+
+Este sistema es una plataforma web integral diseñada para digitalizar y optimizar los procesos administrativos, operativos y de inventario de talleres mecánicos. El proyecto surge como respuesta a la gestión manual (basada en papel) detectada en el taller Europitsccs (Caracas), con el fin de eliminar la fragmentación de datos y mejorar la eficiencia operativa.
 
 Nota: Los modulos realizados actualmente son los descritos como "cliente" y "carro"
+
+## Impacto Comunitario
+
+- Taller: Incremento de la productividad y reducción de errores humanos.
+- Clientes: Mayor transparencia en las garantías y mejor comunicación sobre el estado de sus vehículos.
+- Académico: Promoción del uso de tecnologías libres y aplicación práctica de ingeniería en sistemas para el desarrollo local.
+
+## ¿Para qué sirve?
+
+El sistema centraliza la operación del taller en un entorno digital, permitiendo:
+
+- Control de Clientes y Vehículos: Mantiene un historial unificado de servicios, cambios de propietario y recurrencia de fallas.
+- Gestión de Órdenes de Servicio (OS): Seguimiento en tiempo real de tareas por mecánico y estados de reparación mediante un panel visual.
+- Control de Inventario Inteligente: Catálogo basado en números de parte OEM, con alertas de stock mínimo y trazabilidad de repuestos por servicio.
+- Toma de Decisiones: Dashboard con indicadores clave (KPIs) sobre productividad, rentabilidad y tiempos de respuesta.  
 
 ## Arquitectura MVC
 
