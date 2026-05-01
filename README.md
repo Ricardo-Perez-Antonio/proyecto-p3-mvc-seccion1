@@ -8,6 +8,31 @@ Este sistema es una plataforma web integral diseñada para digitalizar y optimiz
 
 Nota: Los modulos realizados actualmente son los descritos como "cliente" y "carro"
 
+## Diagnóstico Inicial del Proyecto
+
+### Situación Actual y Problemática
+
+El taller mecánico Europitsccs opera actualmente bajo un esquema de gestión tradicional basado en métodos manuales y registros físicos en papel. Esta situación genera las siguientes debilidades críticas:  
+- Fragmentación de la información: No existe una base de datos centralizada, lo que impide consultar historiales de servicios, garantías o recurrencia de fallas de los vehículos.
+  
+- Inconsistencia en el inventario: La falta de un catálogo normalizado (como el uso de números OEM) provoca desorganización, pérdida de datos sobre repuestos utilizados y dificultades para gestionar el stock mínimo.
+  
+- Limitación operativa: La ausencia de trazabilidad en las órdenes de servicio dificulta la asignación de tareas a los mecánicos y el seguimiento de los tiempos de reparación.
+
+- Atención al cliente reactiva: El control limitado sobre las citas y el estado de las reparaciones reduce la capacidad de fidelización y transparencia hacia el cliente.
+  
+### Necesidades Identificadas
+
+Para transformar la operatividad de la comunidad, se han detectado las siguientes prioridades:  
+
+1. Digitalización Integral: Sustituir los registros físicos por un sistema web que integre clientes, vehículos, órdenes e inventario.
+   
+2. Trazabilidad Técnica: Implementar un catálogo por número de pieza del fabricante y un historial unificado por vehículo.
+
+3. Gestión de Indicadores: Generar tableros de control (KPIs) en tiempo real para medir la productividad del personal y la rentabilidad por servicio.
+
+4. Capacitación Tecnológica: Formar al personal en el uso de herramientas digitales para reducir el error humano y asegurar la continuidad operativa.  
+
 ## Impacto Comunitario
 
 - Taller: Incremento de la productividad y reducción de errores humanos.
