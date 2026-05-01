@@ -96,3 +96,22 @@ Respuesta al usuario
 ## Licencia
 
 Proyecto educativo para fines de aprendizaje.
+
+## cambios realizados
+
+- Separar el proyecto en backend (lógica) y frontend (vistas)
+- Crear enrutador central en backend/routes/router.php
+- Extraer consultas SQL a modelos por tabla (usuario, cliente, carro)
+- Mover lógica de negocio a controladores por módulo (cliente/, carro/)
+- Limpiar las vistas quitando consultas SQL y require de modelos
+- Implementar login con hash y validación contra base de datos
+- Implementar clientes: CRUD, búsqueda, paginación
+- Implementar carros: CRUD asociado a cliente
+- Unificar redirecciones con header() y window.location
+- Usar __DIR__ para rutas portables
+- Separar plantilla HTML base (head, header, main) de las vistas de contenido
+- Implementar validación de sesión para rutas protegidas
+- Mejorar mensajes de error en login con diseño CSS
+- Organizar CSS por vista con carga dinámica desde plantilla
+- Mover vistas a subcarpetas por módulo (cliente/, carro/)
+- Eliminar dependencia de main.php unificando conexión en usuario_model
